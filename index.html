@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Wedding Invitation | Digitalinvitee</title>
+<meta name="theme-color" content="#4a0d17">
+<link rel="preload" as="image" href="assets/images/poster.jpg">
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,400&family=Great+Vibes&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+</head><body class="locked">
+<section id="intro" aria-label="Opening">
+  <video id="introVideo" src="assets/video/intro.mp4" poster="assets/images/poster.jpg" playsinline preload="auto"></video>
+  <div class="grade"></div><canvas id="sparks"></canvas>
+  <button id="openBtn" class="glass-gold"><span>Tap to Open Invitation</span></button>
+</section>
+<canvas id="butterflyFx" aria-hidden="true"></canvas>
+<div id="couple3d" hidden aria-hidden="true"><img src="assets/images/couple.webp" alt="" decoding="async"></div>
+<div id="prog"></div>
+<main id="site" hidden>
+  <nav><a href="#hero">Home</a><a href="#couple">Couple</a><a href="#events">Events</a><a href="#gallery">Gallery</a><a href="#rsvp">RSVP</a>
+  <button id="music" hidden aria-pressed="false" aria-label="Toggle music">♪</button></nav>
+  <section id="hero" class="full">
+    <div class="hero-text"><p class="eyebrow" id="tagline"></p><h1 class="shimmer"><span id="bride"></span><i>&amp;</i><span id="groom"></span></h1>
+    <p class="eyebrow">Together Forever</p></div><a href="#couple" class="scroll" aria-label="Scroll down"><span>Scroll Down</span><svg viewBox="0 0 26 32" aria-hidden="true"><path d="M3 4l10 9 10-9"/><path d="M3 15l10 9 10-9"/></svg></a></section>
+  <section id="couple" class="panel reveal"><h2>With Joyful Hearts</h2><p id="family"></p><div class="scratch" id="scratch"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="reveal-box"><p class="kicker">Save the Date</p><div id="dateLabel" class="dt"></div><div id="count" class="count"></div></div><canvas id="scratchCv" aria-label="Scratch to reveal the wedding date"></canvas><span class="shine"></span></div></section>
+  <section id="events" class="panel reveal"><h2>The Celebrations</h2><div id="eventGrid" class="grid"></div>
+    <p><a class="btn" id="mapLink" target="_blank" rel="noopener">View Venue on Google Maps</a></p><p id="venue"></p></section>
+  <section id="gallery" class="panel reveal"><h2>Gallery</h2><div id="galGrid" class="gal"></div></section>
+  <section id="rsvp" class="panel reveal"><h2>RSVP</h2>
+    <form id="rsvpForm" novalidate>
+      <label>Full name<input name="name" required minlength="2" autocomplete="name"></label>
+      <label>Guests attending<input name="guests" type="number" min="1" max="10" value="1" required></label>
+      <label>Will you attend?<select name="attend" required><option value="">Select…</option><option>Joyfully accepts</option><option>Regretfully declines</option></select></label>
+      <label>Message (optional)<textarea name="msg" rows="3"></textarea></label>
+      <p id="err" role="alert"></p>
+      <button class="btn" type="submit">Send RSVP via WhatsApp</button>
+      <button class="btn ghost" type="button" id="saveLocal">Save RSVP on this device</button>
+    </form></section>
+  <footer class="panel reveal"><h2>With Your Blessings</h2><p>Your presence will make our celebration complete.</p>
+    <small>Crafted by Digitalinvitee</small></footer>
+</main>
+<script type="module" src="js/main.js"></script>
+</body></html>
